@@ -15,7 +15,15 @@
 
 
 %:
-	dh $@ 
+	dh $@  --parallel --with systemd
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-gc --libdir=/usr/lib/nix/
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f config.h config.log config.status src/libstore/sandbox-defaults.sb
+	rm -f misc/systemd/nix-daemon.service misc/systemd/nix-daemon.socket misc/upstart/nix-daemon.conf src/libexpr/nix-expr.pc src/libexpr/parser-tab.output src/libmain/nix-main.pc src/libstore/nix-store.pc
 
 
 # dh_make generated override targets

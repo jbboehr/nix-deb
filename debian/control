@@ -20,7 +20,10 @@ Build-Depends:
 	libwww-curl-perl,
 	libxml2,
 	libxslt-dev,
-Standards-Version: 3.9.6
+	docbook-xsl-ns,
+	docbook-xsl,
+	docbook-xml,
+Standards-Version: 3.9.7
 Homepage: https://nixos.org/nix/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/nix.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/nix.git
@@ -30,6 +33,7 @@ Architecture: any
 Depends:
 	${shlibs:Depends},
 	${misc:Depends},
+	${perl:Depends},
 Description: The Purely Functional Package Manager
  Nix is a powerful package manager for Linux and other Unix systems that makes
  package management reliable and reproducible. It provides atomic upgrades and

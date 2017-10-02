@@ -1,11 +1,14 @@
 [Unit]
-Description=Nix daemon
+Description=Nix Daemon
+RequiresMountsFor=/nix/store
+RequiresMountsFor=/nix/var
+ConditionPathIsReadWrite=/nix/var/nix/daemon-socket
 
 [Service]
 EnvironmentFile=-/etc/default/nix
-ExecStart=/usr/local/bin/nix-daemon $EXTRA_OPTS
+ExecStart=/usr/bin/nix-daemon $EXTRA_OPTS
 IgnoreSIGPIPE=false
 KillMode=process
 
 [Install]
-WantedBy=multi-user.target
+Alias=nix-daemon.service

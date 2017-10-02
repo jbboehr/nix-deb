@@ -1,1 +1,1 @@
-debian/nix-setup-user.sh usr/bin/
+debian/nix-setup-user usr/bin/

@@ -1,4 +1,4 @@
-nix (1.11.15-0jbboehr0) unstable; urgency=medium
+nix (1.11.15-0jbboehr0) xenial; urgency=medium
 
   * Initial release
 

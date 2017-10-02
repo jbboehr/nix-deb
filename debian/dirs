@@ -1,0 +1,2 @@
+var/nix/gcroots/per-user
+var/nix/profiles/per-user
