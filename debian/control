@@ -31,6 +31,8 @@ Build-Depends:
 	libxml2-utils,
 	docbook5-xml,
 	xsltproc,
+	flex,
+	bison,
 Standards-Version: 3.9.7
 Homepage: https://nixos.org/nix/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/nix.git
