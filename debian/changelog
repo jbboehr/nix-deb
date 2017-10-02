@@ -1,3 +1,9 @@
+nix (1.11.15-0jbboehr1) xenial; urgency=medium
+
+  * Build fixes
+
+ -- John Boehr <jbboehr@gmail.com>  Mon, 02 Oct 2017 12:30:22 -0700
+
 nix (1.11.15-0jbboehr0) xenial; urgency=medium
 
   * Initial release

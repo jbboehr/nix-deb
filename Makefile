@@ -18,9 +18,6 @@ makefiles = \
   perl/local.mk \
   scripts/local.mk \
   corepkgs/local.mk \
-  misc/systemd/local.mk \
-  misc/launchd/local.mk \
-  misc/upstart/local.mk \
   misc/emacs/local.mk \
   doc/manual/local.mk \
   tests/local.mk

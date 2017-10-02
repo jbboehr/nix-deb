@@ -1,2 +1,3 @@
 01-remove-generated-files.patch
 02-dont-install-units.patch
+03-dont-run-init-makefiles.patch

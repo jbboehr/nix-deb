@@ -20,9 +20,17 @@ Build-Depends:
 	libwww-curl-perl,
 	libxml2,
 	libxslt-dev,
+	docbook,
 	docbook-xsl-ns,
 	docbook-xsl,
 	docbook-xml,
+	curl,
+#	docbook2x,
+	docbook-utils,
+	docbook-dsssl,
+	libxml2-utils,
+	docbook5-xml,
+	xsltproc,
 Standards-Version: 3.9.7
 Homepage: https://nixos.org/nix/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/nix.git
