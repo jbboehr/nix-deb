@@ -1,0 +1,11 @@
+[Unit]
+Description=Nix daemon
+
+[Service]
+EnvironmentFile=-/etc/default/nix
+ExecStart=/usr/local/bin/nix-daemon $EXTRA_OPTS
+IgnoreSIGPIPE=false
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

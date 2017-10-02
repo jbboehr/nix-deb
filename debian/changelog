@@ -1,0 +1,5 @@
+nix (1.11.15-0jbboehr0) unstable; urgency=medium
+
+  * Initial release
+
+ -- John Boehr <jbboehr@gmail.com>  Sun, 01 Oct 2017 16:53:47 -0700

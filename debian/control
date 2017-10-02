@@ -1,0 +1,38 @@
+Source: nix
+Section: admin
+Priority: important
+Maintainer: John Boehr <jbboehr@gmail.com>
+Build-Depends:
+	debhelper (>= 9),
+	dh-systemd,
+	dh-autoreconf,
+	pkg-config,
+	autotools-dev,
+	libssl-dev,
+	libbz2-dev,
+	libsqlite3-dev,
+	libcurl4-openssl-dev,
+	liblzma-dev,
+	libgc-dev,
+	libdbi-perl,
+	libdbd-sqlite3-perl,
+	libseccomp-dev,
+	libwww-curl-perl,
+	libxml2,
+	libxslt-dev,
+Standards-Version: 3.9.6
+Homepage: https://nixos.org/nix/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/nix.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/nix.git
+
+Package: nix
+Architecture: any
+Depends:
+	${shlibs:Depends},
+	${misc:Depends},
+Description: The Purely Functional Package Manager
+ Nix is a powerful package manager for Linux and other Unix systems that makes
+ package management reliable and reproducible. It provides atomic upgrades and
+ rollbacks, side-by-side installation of multiple versions of a package,
+ multi-user package management and easy setup of build environments.
+
