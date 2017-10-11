@@ -1,8 +1,8 @@
 [Unit]
 Description=Nix Daemon
 RequiresMountsFor=/nix/store
-RequiresMountsFor=/nix/var
-ConditionPathIsReadWrite=/nix/var/nix/daemon-socket
+RequiresMountsFor=/var/nix
+ConditionPathIsReadWrite=/var/nix/daemon-socket
 
 [Service]
 EnvironmentFile=-/etc/default/nix

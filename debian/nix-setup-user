@@ -6,7 +6,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 TARGET_USER="$1"
-SYMLINK_PATH="/home/$TARGET_USER/.nix-profile"
+TARGET_HOME=$(su -lc "cd; pwd" "$TARGET_USER")
+SYMLINK_PATH="$TARGET_HOME/.nix-profile"
 PROFILE_DIR="/var/nix/profiles/per-user/$TARGET_USER"
 
 echo "Creating profile $PROFILE_DIR..."
@@ -19,8 +20,8 @@ chown "$TARGET_USER:$TARGET_USER" "$PROFILE_DIR"
 ln -s "$PROFILE_DIR/profile" "$SYMLINK_PATH"
 chown -h "$TARGET_USER:$TARGET_USER" "$SYMLINK_PATH"
 
-echo "export NIX_REMOTE=daemon" >> "/home/$TARGET_USER/.bashrc"
-echo ". /etc/profile.d/nix.sh" >> "/home/$TARGET_USER/.bashrc"
+echo "export NIX_REMOTE=daemon" >> "$TARGET_HOME/.bashrc"
+echo ". /etc/profile.d/nix.sh" >> "$TARGET_HOME/.bashrc"
 
 su -lc "cd; . /etc/profile.d/nix.sh; NIX_REMOTE=daemon nix-channel --update" "$TARGET_USER"
 

@@ -1,3 +1,10 @@
+nix (1.11.15-0jbboehr2) xenial; urgency=medium
+
+  * Socket should be in /var/nix not /nix/var/nix
+  * Make nix-setup-user work for root
+
+ -- John Boehr <jbboehr@gmail.com>  Tue, 10 Oct 2017 16:51:17 -0700
+
 nix (1.11.15-0jbboehr1) xenial; urgency=medium
 
   * Build fixes
